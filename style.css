@@ -603,7 +603,8 @@ blockquote {
 blockquote,
 .card p,
 .content-container p,
-.menu-item {
+/*.menu-item,*/
+.menu {
 	margin-bottom: 16px;
 }
 
