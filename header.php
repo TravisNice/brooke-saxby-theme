@@ -16,7 +16,7 @@
 
 <?php get_template_part( 'template-parts/menu', 'left' ); ?>
 
-<div class="right-side col span-12 span-12mf span-10lf marg-2lf left"> <!-- Close before the body tag in the footer -->
+<div class="right-side col span-12 span-12mf span-9lf marg-3lf left"> <!-- Close before the body tag in the footer -->
 
 <header class="header clearfix">
 <div class="col span-12 align-center pad-12 fuscia-front grey-back shadow-bottom left remove-margin no-underline bottom-16">

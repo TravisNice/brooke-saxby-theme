@@ -1,4 +1,11 @@
 <?php
+	defined ( 'ABSPATH' ) or die ( 'Get out of my plugin dammit!' );
+	
+	if ( !defined ( 'BROOKE_SAXBY_THEME_PATH' ) ) {
+		
+		define ( 'BROOKE_SAXBY_THEME_PATH', dirname ( __FILE__ ) );
+		
+	}
 	
 	function simplicity_setup() {
 		
@@ -63,10 +70,10 @@
 				 array(
 				       'name' => 'Navigation Popout Widgets',
 				       'id'            => 'side-nav-widgets',
-				       'before_widget' => '<div class="no-underline bottom-16">',
-				       'after_widget'  => '</div>',
-				       'before_title'  => '<h2 class="rounded large white-front light-pink-back col span-12 span-12mf span-12lf left pad-5">',
-				       'after_title'   => '</h2>',
+				       'before_widget' => '<div class="no-underline bottom-16 widget-container">',
+				       'after_widget'  => '</div></div>',
+				       'before_title'  => '<h2 class="widget-title rounded large white-front light-pink-back col span-12 span-12mf span-12lf left pad-5">',
+				       'after_title'   => '</h2><div class="widget-content pad-12">'
 				       )
 				 );
 		
@@ -83,10 +90,10 @@
 				 array(
 				       'name' => 'Front Page Widgets',
 				       'id'            => 'front-page-widgets',
-				       'before_widget' => '<div class="no-underline bottom-16">',
-				       'after_widget'  => '</div>',
-				       'before_title'  => '<h2 class="rounded large white-front light-pink-back col span-12 span-12mf span-12lf left pad-5">',
-				       'after_title'   => '</h2>',
+				       'before_widget' => '<div class="no-underline bottom-16 widget-container">',
+				       'after_widget'  => '</div></div>',
+				       'before_title'  => '<h2 class="widget-title rounded large white-front light-pink-back col span-12 span-12mf span-12lf left pad-5">',
+				       'after_title'   => '</h2><div class="widget-content pad-12">'
 				       )
 				 );
 		
@@ -104,11 +111,11 @@
 				  );
 		
 		add_image_size(
-			       'thumbnail-wide',
-			       '192',
-			       '108',
+			       'wide-thumbnail',
+			       '300',
+			       '168',
 			       true
-			       );
+		);
 		
 	}
 	add_action(
@@ -158,6 +165,17 @@
 	add_filter(
 		   'add_to_cart_fragments',
 		   'woocommerce_header_add_to_cart_fragment'
-		   );
+	);
 	
-	?>
+	require( 'classes/brooke-saxby-widgets.php' );
+	
+	add_action(
+		   'widgets_init',
+		   function() {
+			register_widget(
+					'brookeSaxbyRecentPostsWidget'
+			);
+		   }
+	);
+	
+?>

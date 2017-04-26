@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 
+<div class="front-page-container right-side col span-12 left">
 <?php if ( is_active_sidebar( 'front-page-widgets' ) ) : ?>
-	<div id="primary-sidebar" class="widget-area" role="complementary">
-		<?php dynamic_sidebar( 'front-page-widgets' ); ?>
-	</div>
+		<div class="widget-area" role="complementary">
+			<?php dynamic_sidebar( 'front-page-widgets' ); ?>
+		</div>
 <?php endif; ?>
+</div>
 
 <?php get_footer(); ?>

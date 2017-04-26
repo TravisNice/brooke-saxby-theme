@@ -7,7 +7,7 @@
 <?php the_post(); ?>
 
 <?php if( has_post_thumbnail() ) { ?>
-<div class="col span-12s span-12m span-12l content-container" itemscope itemtype="http://schema.org/Article">
+<div class="content-container" itemscope itemtype="http://schema.org/Article">
 
 <header class="fuscia-front light-grey-back no-underline bottom-16">
 <h2 id="post-<?php the_ID(); ?>" class="x-large"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><span itemprop="headline"><?php the_title(); ?></span></a></h2>
@@ -34,7 +34,7 @@
 </div>
 
 <?php } else { ?>
-<div class="col span-12s span-12m span-12l content-container" itemscope itemtype="http://schema.org/Article">
+<div class="content-container" itemscope itemtype="http://schema.org/Article">
 
 <header class="fuscia-front light-grey-back no-underline bottom-16">
 <h2 id="post-<?php the_ID(); ?>" class="x-large"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><span itemprop="headline"><?php the_title(); ?></span></a></h2>
