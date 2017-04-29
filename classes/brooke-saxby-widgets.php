@@ -33,9 +33,7 @@
 			$queryObject = new WP_Query( 'posts_per_page=5' );
 			
 			if ( $queryObject->have_posts() ) {
-				
-				$postCount = 0;
-				
+								
 				while ( $queryObject->have_posts() ) {
 		
 					$queryObject->the_post();
@@ -54,15 +52,10 @@
 			
 					}
 					
-					if ( $postCount < count( $queryObject ) ) {
 		
-						get_template_part( 'template-parts/excerpt', 'rule' );
-						
-					}
+					get_template_part( 'template-parts/excerpt', 'rule' );
 					
 					echo '</div>';
-					
-					$postCount++;
 		
 				}
 				

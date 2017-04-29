@@ -351,7 +351,7 @@ input[type=button] {
 }
 
 .widget-content {
-	background-color: #ffffffcc;
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 /* Borders */
@@ -618,6 +618,10 @@ blockquote {
 }
 
 /* Margins */
+
+.bottom-4 {
+	margin-bottom: 4px;
+}
 
 .bottom-16,
 .bottom-16 ul li,

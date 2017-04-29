@@ -1,57 +1,38 @@
-<?php get_header(); ?>
+<?php
+	get_header();
 
-<?php if (have_posts()) { ?>
+	if (have_posts()) {
+		
+		echo '<div class="content-container">';
 
-<?php while ( have_posts() ) { ?>
+		while ( have_posts() ) {
 
-<?php the_post(); ?>
+			the_post();
 
-<?php if( has_post_thumbnail() ) { ?>
-<div class="content-container" itemscope itemtype="http://schema.org/Article">
+			if( has_post_thumbnail() ) {
 
-<header class="fuscia-front light-grey-back no-underline bottom-16">
-<h2 id="post-<?php the_ID(); ?>" class="x-large"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><span itemprop="headline"><?php the_title(); ?></span></a></h2>
-<span class="x-small black-front"><time itemprop="datePublished" content="<?php the_time('Y-m-d') ?>"><?php the_time('F jS, Y') ?></time> by <span itemprop="author"><?php the_author_posts_link(); ?></span></span>
-</header>
+				get_template_part( 'template-parts/content', 'thumb' );
+				
+			}
+			
+			else {
+				
+				get_template_part( 'template-parts/content', 'nothumb' );
+				
+			}
+			
+		}
+		
+		get_template_part( 'template-parts/post', 'navigation' );
+		
+		comments_template();
+		
+		echo '</div>';
 
-<div>
-<img src="<?php the_post_thumbnail_url( 'full' ); ?>" itemprop="image">
-</div>
+	}
 
-<div>
-<span itemprop="articleBody">
-<?php the_content(); ?>
-</span>
-</div>
+	get_template_part ( 'template-parts/post', 'navigation' );
 
-</div>
+	get_footer();
 
-<?php } else { ?>
-<div class="content-container" itemscope itemtype="http://schema.org/Article">
-
-<header class="fuscia-front light-grey-back no-underline bottom-16">
-<h2 id="post-<?php the_ID(); ?>" class="x-large"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><span itemprop="headline"><?php the_title(); ?></span></a></h2>
-<span class="x-small black-front"><time itemprop="datePublished" content="<?php the_time('Y-m-d') ?>"><?php the_time('F jS, Y') ?></time> by <span itemprop="author"><?php the_author_posts_link(); ?></span></span>
-</header>
-
-<div>
-<span itemprop="articleBody">
-<?php the_content(); ?>
-</span>
-</div>
-
-</div>
-
-<?php } ?>
-
-<?php } ?>
-
-<?php } ?>
-
-<div class="col span-12 span-12mf span-12lf fuscia-front no-underline x-large left">
-<div class="col span-4 span-4mf span-4lf align-left left"><?php if(get_previous_posts_link()) { previous_posts_link('&laquo; Newer Entries'); } else { echo '&laquo; Newer Entries'; } ; ?></div>
-<div class="col span-4 span-4mf span-4lf align-center left"><?php echo paginate_links( array( 'prev_next' => false ) ); ?></div>
-<div class="col span-4 span-4mf span-4lf align-right left"><?php if(get_next_posts_link()) { next_posts_link('Older Entries &raquo;'); } else { echo 'Older Entries &raquo;'; } ; ?></div>
-</div>
-
-<?php get_footer(); ?>
+?>

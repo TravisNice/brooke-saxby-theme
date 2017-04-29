@@ -2,9 +2,7 @@
 	get_header();
 
 	if (have_posts()) {
-
-		$postCount = 0;
-				
+		
 		while ( have_posts() ) {
 			
 			the_post();
@@ -21,13 +19,7 @@
 				
 			}
 			
-			if ( $postCount < count( $post ) ) {
-				
-				get_template_part( 'template-parts/excerpt', 'rule' );
-				
-			}
-						
-			$postCount++;
+			get_template_part( 'template-parts/excerpt', 'rule' );
 			
 		}
 

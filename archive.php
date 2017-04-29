@@ -2,54 +2,41 @@
  * Template Name: Blog
  */
 
-<?php get_header(); ?>
+<?php
+	get_header();
 
-<?php if (have_posts()) { ?>
+	if (have_posts()) {
+		
+		echo '<div class="content-container">';
 
-<?php while ( have_posts() ) { ?>
+		while ( have_posts() ) {
 
-<?php the_post(); ?>
+			the_post();
 
-<?php if( has_post_thumbnail() ) { ?>
+			if( has_post_thumbnail() ) {
 
-<div class="col span-12s span-6m span-3l card left" itemscope itemtype="http://schema.org/Article">
+				get_template_part( 'template-parts/excerpt', 'thumb' );
 
-<div class="left">
-	<img src="<?php the_post_thumbnail_url( 'full' ); ?>" itemprop="image">
-</div>
+			}
+			
+			else {
+				
+				get_template_part( 'template-parts', 'nothumb' );
+				
+			}
 
-<div class="pad-12 white-front light-pink-back no-underline">
-<h2 id="post-<?php the_ID(); ?>" class="large"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><span itemprop="headline"><?php the_title(); ?></span></a></h2>
-<span class="x-small"><time itemprop="datePublished" content="<?php the_time('Y-m-d') ?>"><?php the_time('F jS, Y') ?></time> by <span itemprop="author"><?php the_author_posts_link(); ?></span></span>
-</div>
+		}
+		
+		
+		
+		get_template_part( 'template-parts/post', 'navigation' );
+		
+		comments_template();
+		
+		echo '</div>';
 
-<div class="black-front">
-<span itemprop="articleBody">
-<?php the_excerpt(); ?>
-</span>
-</div>
+	}
 
-</div>
+	get_footer();
 
-<?php } else { ?>
-<div class="col span-12s span-6m span-3l card left" itemscope itemtype="http://schema.org/Article">
-
-<header class="pad-12 white-front light-pink-back no-underline">
-<h2 id="post-<?php the_ID(); ?>" class="large"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><span itemprop="headline"><?php the_title(); ?></span></a></h2>
-<span class="x-small"><time itemprop="datePublished" content="<?php the_time('Y-m-d') ?>"><?php the_time('F jS, Y') ?></time> by <span itemprop="author"><?php the_author_posts_link(); ?></span></span>
-</header>
-
-<div class="black-front">
-<span itemprop="articleBody">
-<?php the_excerpt(); ?>
-</span>
-</div>
-
-</div>
-<?php } ?>
-
-<?php } ?>
-
-<?php } ?>
-
-<?php get_footer(); ?>
+?>
