@@ -1,36 +1,28 @@
 <?php
-$my_query = new WP_Query( $posts );
-
-
-if ( $my_query->found_posts > $my_query->post_count ) {
+	global $wp_query;
+	$big = 999999999;
+	
+	$args = array(
+		    'base'               => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		    'format'             => '/page/%#%',
+		    'total'              => $wp_query->max_num_pages,
+		    'current'            => max( 1, get_query_var( 'paged' ) ),
+		    'show_all'           => false,
+		    'end_size'           => 1,
+		    'mid_size'           => 2,
+		    'prev_next'          => true,
+		    'prev_text'          => __('« Previous'),
+		    'next_text'          => __('Next »'),
+		    'type'               => 'plain',
+		    'add_args'           => false,
+		    'add_fragment'       => '',
+		    'before_page_number' => '',
+		    'after_page_number'  => ''
+		    );
+	
+	$pagination = paginate_links( $args );
 ?>
 
-<div class="col span-12 fuscia-front no-underline x-large left bottom-16">
-
-	<div class="col span-3 align-left left">
-		<?php if(get_previous_posts_link()) {
-			previous_posts_link('&laquo; Newer Entries');
-		} else {
-			echo '&laquo; Newer Entries';
-		} ; ?>
-	</div>
-
-	<div class="col span-4 span-4mf span-4lf align-center left">
-		<?php if ( get_paginate_links() ) {
-			paginate_links( array( 'prev_next' => false ) );
-		} else {
-			echo '&nbsp;';
-		} ?>
-	</div>
-
-	<div class="col span-3 span-3mf span-3lf align-right left">
-		<?php if(get_next_posts_link()) {
-			next_posts_link('Older Entries &raquo;');
-		} else {
-			echo 'No Older Entries';
-		}; ?>
-	</div>
-
+<div class="col span-12 align-center fuscia-front no-underline left bottom-16">
+			<?php echo $pagination; ?>
 </div>
-
-<?php } ?>
