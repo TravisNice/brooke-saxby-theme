@@ -23,7 +23,7 @@
 			
 		}
 		
-		get_template_part( 'template-parts/post', 'navigation' );
+		get_template_part( 'template-parts/single', 'navigation' );
 		
 		comments_template();
 		
