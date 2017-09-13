@@ -29,6 +29,9 @@ There is no Automatic Installation at this time. The theme is not hosted in the 
 Everyday Publishing will handle the installation of the theme from their GitHub repository until further notice that the theme is generalised into a version suitable for public use.
 
 == Changelog ==
+= 2.0.0 =
+Complete re-write to turn it from pink to blue and use more typography settings
+
 = 1.3.1 =
 Fixed a bug in the styling where the menu didn't have a bottom margin
 
