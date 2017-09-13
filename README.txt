@@ -5,7 +5,7 @@ Tags: google, analytics, tracking
 Donate link: https://www.everydaypublishing.com.au/donate-and-contribute
 Requires at least: 3.5
 Tested up to: 4.7.3
-Stable tag: 1.3.1
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ There is no Automatic Installation at this time. The theme is not hosted in the 
 Everyday Publishing will handle the installation of the theme from their GitHub repository until further notice that the theme is generalised into a version suitable for public use.
 
 == Changelog ==
+= 2.0.0 =
+Complete re-write to turn it from pink to blue and use more typography settings
+
 = 1.3.1 =
 Fixed a bug in the styling where the menu didn't have a bottom margin
 
