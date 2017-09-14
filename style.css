@@ -428,9 +428,18 @@ blockquote {
 	padding: 8px;
 }
 
-#bs-single-post-content-with-sidebar ul, #bs-single-post-content-with-sidebar ol,
-#bs-single-post-content-with-sidebar ul ul, #bs-single-post-content-with-sidebar ol ol,
-#bs-single-post-content-with-sidebar ul ul ul, #bs-single-post-content-with-sidebar ol ol ol {
+#bs-single-post-content-with-sidebar ul,
+#bs-single-post-content-with-sidebar ol,
+#bs-single-post-content-with-sidebar ul ul,
+#bs-single-post-content-with-sidebar ol ol,
+#bs-single-post-content-with-sidebar ul ul ul,
+#bs-single-post-content-with-sidebar ol ol ol,
+#bs-single-post-content-without-sidebar ul,
+#bs-single-post-content-without-sidebar ol,
+#bs-single-post-content-without-sidebar ul ul,
+#bs-single-post-content-without-sidebar ol ol,
+#bs-single-post-content-without-sidebar ul ul ul,
+#bs-single-post-content-without-sidebar ol ol ol {
 	margin-left: 32px !important;
 	padding-left: 32px !important;
 	margin-bottom: 8px !important;
@@ -723,9 +732,18 @@ blockquote {
 	padding: 8px;
 }
 
-#bs-single-page-content-with-sidebar ul, #bs-single-page-content-with-sidebar ol,
-#bs-single-page-content-with-sidebar ul ul, #bs-single-page-content-with-sidebar ol ol,
-#bs-single-page-content-with-sidebar ul ul ul, #bs-single-page-content-with-sidebar ol ol ol {
+#bs-single-page-content-with-sidebar ul,
+#bs-single-page-content-with-sidebar ol,
+#bs-single-page-content-with-sidebar ul ul,
+#bs-single-page-content-with-sidebar ol ol,
+#bs-single-page-content-with-sidebar ul ul ul,
+#bs-single-page-content-with-sidebar ol ol ol,
+#bs-single-page-content-without-sidebar ul,
+#bs-single-page-content-without-sidebar ol,
+#bs-single-page-content-without-sidebar ul ul,
+#bs-single-page-content-without-sidebar ol ol,
+#bs-single-page-content-without-sidebar ul ul ul,
+#bs-single-page-content-without-sidebar ol ol ol {
 	margin-left: 32px !important;
 	padding-left: 32px !important;
 	margin-bottom: 8px !important;
@@ -1045,9 +1063,18 @@ blockquote {
 	padding: 8px;
 }
 
-#bs-single-home-content-with-sidebar ul, #bs-single-home-content-with-sidebar ol,
-#bs-single-home-content-with-sidebar ul ul, #bs-single-home-content-with-sidebar ol ol,
-#bs-single-home-content-with-sidebar ul ul ul, #bs-single-home-content-with-sidebar ol ol ol {
+#bs-single-home-content-with-sidebar ul,
+#bs-single-home-content-with-sidebar ol,
+#bs-single-home-content-with-sidebar ul ul,
+#bs-single-home-content-with-sidebar ol ol,
+#bs-single-home-content-with-sidebar ul ul ul,
+#bs-single-home-content-with-sidebar ol ol ol,
+#bs-single-home-content-without-sidebar ul,
+#bs-single-home-content-without-sidebar ol,
+#bs-single-home-content-without-sidebar ul ul,
+#bs-single-home-content-without-sidebar ol ol,
+#bs-single-home-content-without-sidebar ul ul ul,
+#bs-single-home-content-without-sidebar ol ol ol {
 	margin-left: 32px !important;
 	padding-left: 32px !important;
 	margin-bottom: 8px !important;
