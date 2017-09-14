@@ -428,6 +428,14 @@ blockquote {
 	padding: 8px;
 }
 
+#bs-single-post-content-with-sidebar ul, #bs-single-post-content-with-sidebar ol,
+#bs-single-post-content-with-sidebar ul ul, #bs-single-post-content-with-sidebar ol ol,
+#bs-single-post-content-with-sidebar ul ul ul, #bs-single-post-content-with-sidebar ol ol ol {
+	margin-left: 32px !important;
+	padding-left: 32px !important;
+	margin-bottom: 8px !important;
+}
+
 @media screen and (min-width: 640px) {
 	#bs-single-post-content-with-sidebar, 
 	#bs-single-post-content-without-sidebar {
@@ -713,6 +721,14 @@ blockquote {
 	grid-column: col / span 12;
 	grid-row: row 2;
 	padding: 8px;
+}
+
+#bs-single-page-content-with-sidebar ul, #bs-single-page-content-with-sidebar ol,
+#bs-single-page-content-with-sidebar ul ul, #bs-single-page-content-with-sidebar ol ol,
+#bs-single-page-content-with-sidebar ul ul ul, #bs-single-page-content-with-sidebar ol ol ol {
+	margin-left: 32px !important;
+	padding-left: 32px !important;
+	margin-bottom: 8px !important;
 }
 
 @media screen and (min-width: 640px) {
@@ -1027,6 +1043,14 @@ blockquote {
 	grid-column: col / span 12;
 	grid-row: row 3;
 	padding: 8px;
+}
+
+#bs-single-home-content-with-sidebar ul, #bs-single-home-content-with-sidebar ol,
+#bs-single-home-content-with-sidebar ul ul, #bs-single-home-content-with-sidebar ol ol,
+#bs-single-home-content-with-sidebar ul ul ul, #bs-single-home-content-with-sidebar ol ol ol {
+	margin-left: 32px !important;
+	padding-left: 32px !important;
+	margin-bottom: 8px !important;
 }
 
 #bs-home-comments-with-sidebar hr,
