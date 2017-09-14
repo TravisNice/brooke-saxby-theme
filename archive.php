@@ -47,6 +47,7 @@
       			the_title();
       			echo '</a></h2>';
 			the_excerpt();
+			echo '<hr />';
 		}
     
 		echo '<div id="bs-home-pagination">'. $pagination .'</div>';
