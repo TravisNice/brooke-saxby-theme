@@ -146,7 +146,7 @@
       
       if (!empty($widget_title))
       {
-        echo $args['before_title'] . '<a href="' . $widget_page . '" class="bs-container">' . $widget_title . '</a>' . $args['after_title'];
+        echo $args['before_title'] . '<a href="' . $widget_page . '">' . $widget_title . '</a>' . $args['after_title'];
       }
       
       echo $args['after_widget'];
@@ -276,7 +276,7 @@
     $id = 'bs-front-page-sidebar';
     $description = 'Area on the front page for the button styled widgets.';
     $class = '';
-    $before_widget = '<div class="bs-front-page-widget bs-color-2 bs-box bs-text-centre">';
+    $before_widget = '<div class="bs-front-page-widget">';
     $after_widget = '</div>';
     $before_title = '';
     $after_title = '';
@@ -296,10 +296,10 @@
     $id = 'bs-sidebar-widgets';
     $description = 'Area on the post/page for the Facebook and Recent Posts.';
     $class = '';
-    $before_widget = '<div class="bs-container">';
-    $after_widget = '</div>';
-    $before_title = '';
-    $after_title = '';
+    $before_widget = '<span class="bs-sidebar-widget">';
+    $after_widget = '</span>';
+    $before_title = '<h3>';
+    $after_title = '</h3>';
     $args = array('name' => $name, 'id' => $id, 'description' => $description, 'class' => $class, 'before_widget' => $before_widget, 'after_widget' => $after_widget, 'before_title' => $before_title, 'after_title' => $after_title);
     register_sidebar($args);
   }
@@ -316,10 +316,10 @@
     $id = 'bs-footer-left-widgets';
     $description = 'Area on all pages for the left footer column.';
     $class = '';
-    $before_widget = '';
-    $after_widget = '';
-    $before_title = '';
-    $after_title = '';
+    $before_widget = '<span class="bs-left-footer-widget">';
+    $after_widget = '</span>';
+    $before_title = '<h3>';
+    $after_title = '</h3>';
     $args = array('name' => $name, 'id' => $id, 'description' => $description, 'class' => $class, 'before_widget' => $before_widget, 'after_widget' => $after_widget, 'before_title' => $before_title, 'after_title' => $after_title);
     register_sidebar($args);
   }
@@ -336,10 +336,10 @@
     $id = 'bs-footer-center-widgets';
     $description = 'Area on all pages for the center footer column.';
     $class = '';
-    $before_widget = '';
-    $after_widget = '';
-    $before_title = '';
-    $after_title = '';
+    $before_widget = '<span class="bs-center-footer-widget">';
+    $after_widget = '</span>';
+    $before_title = '<h3>';
+    $after_title = '</h3>';
     $args = array('name' => $name, 'id' => $id, 'description' => $description, 'class' => $class, 'before_widget' => $before_widget, 'after_widget' => $after_widget, 'before_title' => $before_title, 'after_title' => $after_title);
     register_sidebar($args);
   }
@@ -356,10 +356,10 @@
     $id = 'bs-footer-right-widgets';
     $description = 'Area on all pages for the center footer column.';
     $class = '';
-    $before_widget = '';
-    $after_widget = '';
-    $before_title = '';
-    $after_title = '';
+    $before_widget = '<span class="bs-right-footer-widget">';
+    $after_widget = '</span>';
+    $before_title = '<h3>';
+    $after_title = '</h3>';
     $args = array('name' => $name, 'id' => $id, 'description' => $description, 'class' => $class, 'before_widget' => $before_widget, 'after_widget' => $after_widget, 'before_title' => $before_title, 'after_title' => $after_title);
     register_sidebar($args);
   }

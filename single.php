@@ -1,64 +1,44 @@
 <?php
-  
-  get_header();
-  echo '<div class="bs-grid">';
+	get_header();
+	echo '<div id="bs-single-post-grid">';
 
-  /* Headline Row */
-  echo '<div class="bs-header bs-large-container">';
-  echo '<a href="'. site_url() .'">';
-  echo '<h1 class="bs-text-centre bs-color-0">';
-  bloginfo('name');
-  echo '</h1>';
-  echo '</a>';
-  echo '</div> <!-- end header -->';
+	/* Headline Row */
+	echo '<div id="bs-single-post-headline">';
+	echo '<a href="'. site_url() .'">';
+	echo '<h1>';
+	bloginfo('name');
+	echo '</h1>';
+	echo '</a>';
+	echo '</div> <!-- end header -->';
 
-  /* Content Row */
-  if (is_active_sidebar('bs-sidebar-widgets'))
-  {
-    echo '<div class="bs-content-thin">';
-  }
-  else
-  {
-    echo '<div class="bs-content">';
-  }
+	/* Content Row */
+	if (is_active_sidebar('bs-sidebar-widgets')) {
+		echo '<div id="bs-single-post-content-with-sidebar">';
+	}
+	else {
+		echo '<div id="bs-single-post-content-without-sidebar">';
+	}
 
-  if (have_posts())
-  {
-    while (have_posts())
-    {
-      the_post();
-          
-      echo '<div class="bs-container">';
-      echo '<h2 class="bs-content-title">'. get_the_title() .'</h2>';
-      
-      if (has_post_thumbnail())
-      {
-        /* Featured Image */
-        $post_thumbnail_id = get_post_thumbnail_id();
-        $img_src = wp_get_attachment_image_url( $post_thumbnail_id, 'full' );
-        $img_srcset = wp_get_attachment_image_srcset( $post_thumbnail_id, 'full' );
-        
-        echo '<div class="bs-featured-image">';
-        echo '<img src="' . $img_src . '" srcset="' . $img_srcset . '" style="width: 100%;" />';
-        echo '</div> <!-- end featured image -->';
-      }
-      
-      the_content();
-      echo '</div>';
-      
-      comments_template();
-    }
-      
-    echo '</div> <!-- end content -->';
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post();
+			echo '<h2 id="bs-single-post-content-title">'. get_the_title() .'</h2>';
+      			if (has_post_thumbnail()) {
+				/* Featured Image */
+				$post_thumbnail_id = get_post_thumbnail_id();
+				$img_src = wp_get_attachment_image_url( $post_thumbnail_id, 'full' );
+				$img_srcset = wp_get_attachment_image_srcset( $post_thumbnail_id, 'full' );
+				echo '<img id="bs-single-post-featured-image" src="' . $img_src . '" srcset="' . $img_srcset . '" style="width: 100%;" />';
+			}
+			the_content();
+		}
+		echo '</div> <!-- end content -->';
+		comments_template();
+
+		/* Divider Row */
+		echo '<div id="bs-single-post-divider"><hr /></div> <!-- end divider -->';
     
-    if (is_active_sidebar('bs-sidebar-widgets'))
-    {
-      echo '<div class="bs-sidebar bs-container bs-color-2">';
-      dynamic_sidebar('bs-sidebar-widgets');
-      echo '</div>';
-    }
-    
-  }
-
-  get_footer();
+		get_sidebar();
+	}
+	get_footer();
 ?>
