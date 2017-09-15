@@ -62,6 +62,13 @@
 		$ver = false;
 		$media = 'all';
 		wp_enqueue_style($handle, $src, $deps, $ver, $media);
+
+		$handle = 'lobster-two-font';
+		$src = 'https://fonts.googleapis.com/css?family=Lobster+Two';
+		$deps = array();
+		$ver = false;
+		$media = 'all';
+		wp_enqueue_style($handle, $src, $deps, $ver, $media);
 	}
 	
 	$tag = 'wp_enqueue_scripts';

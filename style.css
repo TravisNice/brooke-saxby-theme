@@ -1,14 +1,14 @@
 /*
-	Theme Name: Brooke Saxby in Blue
-	Author: Travis J. Nice
-	Author URI: http://www.everydaypublishing.com.au/
-	Description: Inspiration is drawn from Laura D. Thanks everyone.
-	Version: 2.1.1
-	License: GNU General Public License v2 or later
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Tags: reponsive, grid, mobile friendly
-	Text Domain: wordpress
-*/
+ * Theme Name: Brooke Saxby in Blue
+ * Author: Travis J. Nice
+ * Author URI: http://www.everydaypublishing.com.au/
+ * Description: Inspiration is drawn from Laura D. Thanks everyone.
+ * Version: 2.1.1
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: reponsive, grid, mobile friendly
+ * Text Domain: wordpress
+ */
 
 * {
 	margin: 0;
@@ -123,6 +123,12 @@ blockquote {
 	line-height: 1.25;
 }
 
+#bs-front-page-headline h1,
+#bs-single-page-headline h1,
+#bs-single-post-headline h1 {
+	font-family: 'Lobster Two', cursive;
+	padding: 32px;
+}
 
 /*************** FRONT PAGE STYLING ***************/
 
