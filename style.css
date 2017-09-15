@@ -128,6 +128,7 @@ blockquote {
 #bs-single-post-headline h1 {
 	font-family: 'Lobster Two', cursive;
 	padding: 32px;
+	font-size: 6em;
 }
 
 /*************** FRONT PAGE STYLING ***************/
