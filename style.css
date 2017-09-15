@@ -3,7 +3,7 @@
 	Author: Travis J. Nice
 	Author URI: http://www.everydaypublishing.com.au/
 	Description: Inspiration is drawn from Laura D. Thanks everyone.
-	Version: 2.1.0
+	Version: 2.1.1
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Tags: reponsive, grid, mobile friendly
@@ -700,16 +700,36 @@ blockquote {
 	text-align: center;
 }
 
+#bs-single-page-headline-image {
+	display: block;
+	grid-column: col / span 12;
+	grid-row: row;
+	z-index: -1;
+}
+
+#bs-single-page-headline-image img {
+	width: 100%;
+}
+
 #bs-single-page-headline a,
 #bs-single-page-content-with-sidebar a, 
 #bs-single-page-content-without-sidebar a {
-	color: rgb(91, 93, 145);
 	text-decoration: none;
 	transition: .75s;
 	-o-transition: .75s;
 	-ms-transition: .75s;
 	-moz-transition: .75s;
 	-webkit-transition: .75s;
+}
+
+
+#bs-single-page-headline a {
+	color: rgb(255, 255, 255);
+}
+
+#bs-single-page-content-with-sidebar a, 
+#bs-single-page-content-without-sidebar a {
+	color: rgb(91, 93, 145);
 }
 
 #bs-single-page-content-with-sidebar a, 

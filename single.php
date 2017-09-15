@@ -3,13 +3,7 @@
 	echo '<div id="bs-single-post-grid">';
 
 	/* Headline Row */
-	echo '<div id="bs-single-post-headline">';
-	echo '<a href="'. site_url() .'">';
-	echo '<h1>';
-	bloginfo('name');
-	echo '</h1>';
-	echo '</a>';
-	echo '</div> <!-- end header -->';
+	include('inc/bs-headline-row.php');
 
 	/* Content Row */
 	if (is_active_sidebar('bs-sidebar-widgets')) {
@@ -36,8 +30,8 @@
 		comments_template();
 
 		/* Divider Row */
-		echo '<div id="bs-single-post-divider"><hr /></div> <!-- end divider -->';
-    
+   		include('inc/bs-divider-row.php');
+ 
 		get_sidebar();
 	}
 	get_footer();

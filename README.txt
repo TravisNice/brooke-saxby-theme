@@ -29,6 +29,9 @@ There is no Automatic Installation at this time. The theme is not hosted in the 
 Everyday Publishing will handle the installation of the theme from their GitHub repository until further notice that the theme is generalised into a version suitable for public use.
 
 == Changelog ==
+= 2.1.1 =
+Fixed a bug in the <ul> and <ol> margins and padding
+
 = 2.1.0 =
 Re-write style.css to accomodate v2.0.0 changes
 

@@ -26,10 +26,7 @@
 	echo '<div id="bs-home-grid">';
   
 	/* Headline Row */
-	echo '<div id="bs-home-headline"><a href="'. site_url() .'"><h1>';
-	bloginfo('name');
-	echo '</h1></a></div> <!-- end header -->';
-  
+ 	include('inc/bs-headline-row.php'); 
 	/* Content Row */
 	if (is_active_sidebar('bs-sidebar-widgets')) {
 		echo '<div id="bs-home-content-with-sidebar">';
@@ -55,5 +52,6 @@
 		echo '</div> <!-- end content -->';
 	}
 
+	include('inc/bs-divider-row.php');
 	get_footer();
 ?>
