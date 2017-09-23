@@ -237,65 +237,6 @@
 	$accepted_args = 0;
 	add_action($tag, $function_to_add, $priority, $accepted_args);
 	
-	class bsCopyrightWidget extends WP_Widget {
-		public function __construct() {
-			$id_base = 'bs_copyright_widget';
-			$name = 'BS: Copyright';
-			
-			$class_name = 'bsCopyrightWidget';
-			$description = __('Brooke Saxby\'s copyright notice.');
-			$widget_options = array('classname' => $class_name, 'description' => $description);
-			
-			$control_options = array();
-			
-			parent::__construct($id_base, $name, $widget_options, $control_options);
-		}
-		
-		public function widget( $args, $instance )
-		{
-			extract( $args );
-			$title = apply_filters( 'widget_title', $instance['title'] );
-			echo $before_widget;
-			if ( !empty( $title ) )
-			{
-				echo $before_title . $title . $after_title;
-			}
-			echo "<p>Copyright &copy; " . date('Y') . " Brooke Saxby. All Rights Reserved.</p>";
-			echo $after_widget;
-		}
-		
-		public function form( $instance )
-		{
-			if ( isset( $instance[ 'title' ] ) )
-			{
-				$title = $instance[ 'title' ];
-			}
-			else
-			{
-				$title = __( 'New title', 'text_domain' );
-			}
-			echo "<p>Copyright &copy; " . date('Y') . " Brooke Saxby. All Rights Reserved.</p>";
-		}
-		
-		public function update( $new_instance, $old_instance )
-		{
-			$instance = array();
-			$instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-			return $instance;
-		}
-	}
-	
-	function bs_copyright_widget_registration()
-	{
-		register_widget('bsCopyrightWidget');
-	}
-	
-	$tag = 'widgets_init';
-	$function_to_add = 'bs_copyright_widget_registration';
-	$priority = 10;
-	$accepted_args = 0;
-	add_action($tag, $function_to_add, $priority, $accepted_args);
-
 	/* Register Widget Areas */
 	function bs_front_page_sidebar_registration()
 	{

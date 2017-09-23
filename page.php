@@ -1,16 +1,11 @@
 <?php
 	get_header();
-	echo '<div id="bs-single-page-grid">';
 
 	/* Headline Row */
-	include('inc/bs-headline-row.php');
+    get_template_part('bs-header');
 
 	/* Content Row */
-	include('inc/bs-content-row.php');
-
-	/* Divider Row */
-	echo '<div id="bs-single-page-divider"><hr /></div> <!-- end divider -->';
+	get_template_part('bs-content');
     
-	get_sidebar();
 	get_footer();
 ?>

@@ -26,7 +26,8 @@
 	echo '<div id="bs-home-grid">';
   
 	/* Headline Row */
- 	include('inc/bs-headline-row.php'); 
+ 	include('inc/bs-headline-row.php');
+    
 	/* Content Row */
 	if (is_active_sidebar('bs-sidebar-widgets')) {
 		echo '<div id="bs-home-content-with-sidebar">';
