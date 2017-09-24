@@ -146,6 +146,32 @@
 	$priority = 10;
 	$accepted_args = 0;
 	add_action( $tag, $function_to_add, $priority, $accepted_args );
+    
+    function bs_woocommerce_before_main_content() {
+        get_template_part('bs-header');
+        echo '<article>';
+    }
+    
+    $tag = 'woocommerce_before_main_content';
+    $function_to_add = 'bs_woocommerce_before_main_content';
+    $priority = 10;
+    $accepted_args = 0;
+    add_action( $tag, $function_to_add, $priority, $accepted_args );
+    
+    function bs_woocommerce_after_main_content() {
+        echo '</article>';
+    }
+    
+    $tag = 'woocommerce_after_main_content';
+    $function_to_add = 'bs_woocommerce_after_main_content';
+    $priority = 10;
+    $accepted_args = 0;
+    add_action( $tag, $function_to_add, $priority, $accepted_args );
+    
+    $tag = 'woocommerce_sidebar';
+    $function_to_remove = 'woocommerce_get_sidebar';
+    $priority = 10;
+    remove_action( $tag, $function_to_remove, $priority );
 	
 	/* Define our own widgets */
 	class bsFrontPageButtonWidget extends WP_Widget
